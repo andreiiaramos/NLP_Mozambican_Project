@@ -45,4 +45,47 @@ We implement a small, reproducible pipeline:
    - Simple counts of improvements by category
 
 ---
-We test whether a small rule-based normalization system can improve translation quality.
+## Repository Structure
+
+
+data/
+raw/ # original sentences
+processed/ # normalized sentences
+
+rules/
+orthography_rules.json
+lexicon.json
+
+src/
+normalize.py
+evaluate.py
+
+results/
+baseline_translations.csv
+normalized_translations.csv
+evaluation.csv
+
+## Preliminary Observations
+
+- MT systems struggle with **informal abbreviations and spelling variation**
+- Normalization often improves fluency and lexical accuracy
+- **Borrowed vocabulary remains challenging**, even after normalization
+
+---
+
+## Limitations
+
+- Small dataset (~100 sentences)
+- Manual annotation and evaluation
+- Rule-based normalization is limited in coverage
+## Reproducibility
+
+All data (or pointers), normalization rules, and scripts are included to allow replication and extension of this work.
+
+---
+
+## Next Steps
+
+- Expand borrowed vocabulary lexicon
+- Refine normalization rules
+- Analyze error patterns in more detail
